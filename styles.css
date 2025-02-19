@@ -13,6 +13,7 @@
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    
 }
 
 header {
@@ -20,7 +21,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 120px;
+    padding: 20px;
     background: #11141a;
     display: flex;
     justify-content: space-between;
@@ -45,9 +46,9 @@ section {
     justify-content: center;
     align-items: center;
     background: #1f242d;
-    color: #fff;
     font-weight: 700;
     scroll-snap-align: start;
+    padding-top: 80px;
 }
 section:nth-child(odd) {
     background: #323946;
@@ -55,13 +56,12 @@ section:nth-child(odd) {
 
 
 .aboutText{
-    width: 47ch;
-    animation: typing 2s steps(48), blink .5s step-end infinite alternate;
+    width: 30ch;
+    animation: typing 2s steps(30), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 2em;
 }
 
 @keyframes typing {
@@ -91,4 +91,70 @@ section:nth-child(odd) {
     width: 50%;
     gap: 40px;
     margin-bottom: 30px;
+    font-size: 10px;
 }
+
+.hello{
+    font-size: 1rem;
+    color: rgb(199, 199, 199);
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 30px;
+}
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+
+  }
+
+  .btn-color-1,
+  .btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+  }
+  
+  .btn-color-1:hover,
+  .btn-color-2:hover {
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+  }
+  
+  .btn-color-1,
+  .btn-color-2:hover {
+    background: #6E85B2;
+    color: white;
+  }
+  
+
+  .btn-color-2 {
+    background: #6E85B2;
+  }
+  
+  .btn-color-2:hover {
+    border: rgb(0, 0, 0) 0.1rem solid;
+    background: rgb(0, 0, 0);
+  }
+  
+  .btn-container {
+    gap: 1rem;
+  }
+
+
+.icon {
+    cursor: pointer;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
