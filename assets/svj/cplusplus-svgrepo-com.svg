@@ -1,0 +1,16 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="C++" role="img" viewBox="-128 -128 768.00 768.00" width="220px" height="220px" fill="#000000">
+<g id="SVGRepo_bgCarrier" stroke-width="0">
+<path transform="translate(-128, -128), scale(48)" fill="#ffffff" d="M9.166.33a2.25 2.25 0 00-2.332 0l-5.25 3.182A2.25 2.25 0 00.5 5.436v5.128a2.25 2.25 0 001.084 1.924l5.25 3.182a2.25 2.25 0 002.332 0l5.25-3.182a2.25 2.25 0 001.084-1.924V5.436a2.25 2.25 0 00-1.084-1.924L9.166.33z" strokewidth="0"/>
+</g>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier">
+<rect width="512" height="512" rx="15%" fill="#ffffff"/>
+<path fill="#004482" d="M270.3 445l141.1-81.4c4.1-2.3 7.8-6.4 10.4-11l-166.3-96-166.3 96c2.7 4.6 6.4 8.7 10.4 11L240.8 445c8.1 4.7 21.4 4.7 29.5 0z"/>
+<path fill="#659AD2" d="M421.8 160.5c-2.7-4.6-6.4-8.7-10.4-11L270.3 68c-8.1-4.7-21.4-4.7-29.6 0l-141 81.5c-8.1 4.7-14.8 16.2-14.8 25.6V338c0 4.7 1.7 9.9 4.3 14.6l166.3-96 166.3-96.1z"/>
+<circle cx="256" cy="256" r="86" fill="none" stroke="#ffffff" stroke-width="57"/>
+<path fill="#00599C" d="M421.8 352.6c2.7-4.6 4.3-9.9 4.3-14.6V175.2c0-4.7-1.7-10-4.3-14.7l-166.3 96.1 166.3 96z"/>
+<path stroke="#ffffff" stroke-width="13" d="M350.5 237 v39 M331,257 h39 M397.5 237 v39 M378,257 h39"/>
+</g>
+</svg>

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: "Kar";
+  src: url("/assets/fonts/Karrik-Regular.woff2") format("woff2");
+  font-weight: 900;
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,12 +13,15 @@
     scroll-behavior: smooth;
     color: white;
 }
+body{
 
+}
 
 .container{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+
     
 }
 
@@ -24,7 +33,7 @@ header {
     padding: 20px;
     background: #11141a;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 00;
 }
@@ -35,11 +44,15 @@ nav a {
     text-decoration: none;
     margin-left: 35px;
     transition: .3s;
+    font-family: "Poppins";
 }
 nav a:hover,
 nav a.active {
+    font-size: 20px;
+
     color: #0ef;
 }
+
 section {
     min-height: 100vh;
     display: flex;
@@ -54,15 +67,40 @@ section:nth-child(odd) {
     background: #323946;
 }
 
+.PageTwo{
+  max-width: 1000px;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+}
+
+.PageTwo h1,h2{
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 30px;
+}
 
 .aboutText{
     width: 21ch;
-    animation: typing 2s steps(21), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: "Poppins", serif;
+    
 }
+
+.PageTwo li{
+
+}
+
+
+
 
 @keyframes typing {
     from {
@@ -82,24 +120,10 @@ section:nth-child(odd) {
     /* border: 1px solid rebeccapurple; */
 }
 
-#two{
-    display: flex;
-    flex-direction: column;
-}
-
-.aboutMe{
-    width: 50%;
-    gap: 40px;
-    margin-bottom: 30px;
-    font-size: 20px;
-    font-family: "Space Mono", serif;
-}
-
 .hello{
     font-size: 1rem;
-    color: rgb(199, 199, 199);
+    color: rgb(231, 231, 231);
 }
-
 .btn-container{
     display: flex;
     justify-content: center;
@@ -114,39 +138,31 @@ section:nth-child(odd) {
     border-radius: 2rem;
 
   }
-
   .btn-color-1,
   .btn-color-2 {
     border: rgb(53, 53, 53) 0.1rem solid;
+    box-shadow: 10px 10px 10px #252525;
   }
-  
   .btn-color-1:hover,
   .btn-color-2:hover {
     cursor: pointer;
     background: rgb(0, 0, 0);
   }
-  
   .btn-color-1,
   .btn-color-2:hover {
     background: #6E85B2;
     color: white;
   }
-  
-
   .btn-color-2 {
     background: #6E85B2;
   }
-  
   .btn-color-2:hover {
     border: rgb(0, 0, 0) 0.1rem solid;
     background: rgb(0, 0, 0);
   }
-  
   .btn-container {
     gap: 1rem;
   }
-
-
 .icon {
     cursor: pointer;
     height: 3rem;
@@ -160,10 +176,77 @@ section:nth-child(odd) {
     gap: 1rem;
   }
 
+  .profilePicture img {
+    width: 200%;
+    max-width: 300px; /* Adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+    max-height: max-content;
+    border-radius: 7%; 
+    display: block; /* Prevents extra spacing */
+    box-shadow: 10px 10px 10px #11141A;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.profilePicture{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  font-family: "Kar",Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.7; 
+}
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.skill-card {
+  background: #6E85B2;
+  padding: 20px;
+  border-radius: 10%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+.skill-card h1{
+
+}
+.skill-card:hover {
+  transform: scale(1.1);
+}
+
+.skill-card h2 {
+  font-size: 18px;
+  font-family: "Space Mono", monospace;
+}
+
+.skill-card p {
+  font-size: 12px;
+  color: white;
+}
+
   @media screen and (max-width: 768px) {
     .aboutMe p {
-        font-size: 0.5rem; /* Smaller text for mobile */
-        line-height: 1.5; /* Reduce spacing */
+        font-size: 0.5rem; 
+        line-height: 1.5; 
 
     }
+
+
+    .skills-container {
+      flex-direction: column;
+      align-items: center;
+  }
 }
+
