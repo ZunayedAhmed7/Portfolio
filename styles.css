@@ -35,7 +35,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 00;
+    z-index: 1000;
 }
 
 nav a {
@@ -49,7 +49,6 @@ nav a {
 nav a:hover,
 nav a.active {
     font-size: 20px;
-
     color: #0ef;
 }
 
@@ -87,7 +86,7 @@ section:nth-child(odd) {
 
 .aboutText{
     width: 21ch;
-    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(24, end), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -95,8 +94,55 @@ section:nth-child(odd) {
     
 }
 
-.PageTwo li{
+#projects {
+  padding: 80px 20px;
+  text-align: center;
+  background: #1f242d;
+}
 
+.section-title {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #6E85B2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-info {
+  margin-top: 15px;
+}
+
+.project-info h2 {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.project-info p {
+  font-size: 1rem;
+  margin: 10px 0;
 }
 
 
@@ -242,11 +288,53 @@ section:nth-child(odd) {
         line-height: 1.5; 
 
     }
-
-
-    .skills-container {
+    .profilePicture {
       flex-direction: column;
       align-items: center;
+      text-align: center; 
+      padding-bottom: 20px;
+      
   }
+
+  .profilePicture img {
+      order: -1; /* Move image to the top */
+      max-width: 80%;
+      margin-bottom: 15px;
+      
+  }
+
+  .profilePicture p {
+    margin: 10px;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    background: #11141a;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Reduce spacing between items */
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0 10px 10px; /* Adjust padding for better fit */
+}
+
+nav a {
+    font-size: 12px; /* Adjust font size */
+    margin: 0 5px; /* Reduce margin to keep everything in one line */
+    padding: 5px 8px;
+}
+nav a:hover,
+nav a.active {
+    font-size: 12px;
+    color: #0ef;
+}
+
 }
 
