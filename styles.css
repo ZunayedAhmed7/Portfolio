@@ -60,7 +60,8 @@ section {
     background: #1f242d;
     font-weight: 700;
     scroll-snap-align: start;
-    padding-top: 80px;
+    padding-top: 60px;
+
 }
 section:nth-child(odd) {
     background: #323946;
@@ -86,72 +87,29 @@ section:nth-child(odd) {
 
 .aboutText{
     width: 21ch;
-    animation: typing 2s steps(24, end), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(24, end) 0.5s forwards, blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: "Poppins", serif;
+    visibility: hidden;
     
 }
-
-#projects {
-  padding: 80px 20px;
-  text-align: center;
-  background: #1f242d;
+.aboutText::after {
+  content: "";
+  animation: none;
 }
-
-.section-title {
-  font-size: 2rem;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 30px;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
-}
-
-.project-card {
-  background: #6E85B2;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-  text-align: left;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.project-info {
-  margin-top: 15px;
-}
-
-.project-info h2 {
-  font-size: 1.5rem;
-  font-family: "Poppins", sans-serif;
-}
-
-.project-info p {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-
-
 
 
 @keyframes typing {
-    from {
-      width: 0
-    }
+  from {
+    width: 0;
+    visibility: visible; /* Make the text appear when animation starts */
+}
+to {
+    width: 21ch;
+    visibility: visible; /* Keep it visible after typing */
+}
   }
       
   @keyframes blink {
@@ -265,9 +223,7 @@ section:nth-child(odd) {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
-.skill-card h1{
 
-}
 .skill-card:hover {
   transform: scale(1.1);
 }
@@ -281,6 +237,177 @@ section:nth-child(odd) {
   font-size: 12px;
   color: white;
 }
+
+.pageThree{
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.pageThree h2{
+  font-size: 15px;
+  margin-left: 350px;
+}
+
+
+.projectCard{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+.projectImg img{
+  height: auto;
+  width: 400px;
+  margin:10px;
+  border: 4px solid black;
+  border-image: linear-gradient(45deg, #000000, #ffffff) 1;
+  
+}
+
+.imgBox{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttonBox{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+.projects-title {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 25px;
+}
+.projectText p{
+  text-align: justify;
+  font-family: "Kar";
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 100;
+
+}
+.projectText h2{
+  font-family: "Poppins";
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+
+}
+.projectText ul li {
+  font-family: "kar";
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+.projectText ul {
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 10px;
+}
+
+.projectText ul li::before {
+    content: "✔";
+    color: #4CAF50;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.contact-section {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  font-family: "Poppins";
+}
+
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contact-subtitle a {
+  color: #d9534f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-subtitle a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  color: black;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #d9534f;
+}
+
+.submit-btn {
+  width: 180px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #d9534f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-btn::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  background: rgb(168, 82, 82);
+  border-radius: 5px;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+
+#status-message {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 
   @media screen and (max-width: 768px) {
     .aboutMe p {
@@ -319,15 +446,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Reduce spacing between items */
+    gap: 5px;
     flex-wrap: nowrap;
     white-space: nowrap;
-    padding: 0 10px 10px; /* Adjust padding for better fit */
+    padding: 0 10px 10px;
 }
 
 nav a {
-    font-size: 12px; /* Adjust font size */
-    margin: 0 5px; /* Reduce margin to keep everything in one line */
+    font-size: 12px;
+    margin: 0 5px;
     padding: 5px 8px;
 }
 nav a:hover,
@@ -335,6 +462,51 @@ nav a.active {
     font-size: 12px;
     color: #0ef;
 }
+.container {
+  scroll-snap-type: none;
+}
+.projectCard {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
+
+  .projectImg {
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .projectImg img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .imgBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    height: auto;
+    
+  }
+
+  .projectText {
+ 
+    font-size: 14px;
+    padding: 10px;
+    width: 90%;
+  }
+  .pageThree h2{
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+  .buttonBox{
+    display: none;
+  }
 
 }
 

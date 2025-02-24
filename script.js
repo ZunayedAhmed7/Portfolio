@@ -15,3 +15,10 @@ window.onscroll = () => {
     });
 };
 
+window.addEventListener("load", function () {
+    let aboutText = document.querySelector(".aboutText");
+    aboutText.style.display = "none"; // Hide temporarily
+    setTimeout(() => {
+        aboutText.style.display = "block"; // Show after a delay
+    }, 200);
+});
