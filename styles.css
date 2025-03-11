@@ -16,7 +16,6 @@
   color: white;
 }
 
-body {}
 
 .container {
   scroll-snap-type: y mandatory;
@@ -259,99 +258,7 @@ h2 {
   color: white;
 }
 
-/* .pageThree {
-  width: 1200px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 
-}
-
-.pageThree h2 {
-  font-size: 15px;
-  margin-left: 350px;
-}
-
-
-.projectCard {
-  width: 90%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.projectImg img {
-  height: auto;
-  width: 400px;
-  margin: 10px;
-  border: 4px solid black;
-  border-image: linear-gradient(45deg, #000000, #ffffff) 1;
-
-}
-
-.imgBox {
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonBox {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.projects-title {
-  display: flex;
-  justify-content: center;
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 25px;
-}
-
-.projectText p {
-  text-align: justify;
-  font-family: "Kar";
-  font-size: 14px;
-  line-height: 1.8;
-  font-weight: 100;
-
-}
-
-.projectText h2 {
-  font-family: "Poppins";
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-
-}
-
-.projectText ul li {
-  font-family: "kar";
-  margin: 5px 0;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.projectText ul {
-  list-style-type: none;
-  padding-left: 0;
-  padding-top: 10px;
-}
-
-.projectText ul li::before {
-  content: "✔";
-  color: #4CAF50;
-  font-weight: bold;
-  margin-right: 8px;
-} */
 
 .pageThree h1 {
   display: flex;
