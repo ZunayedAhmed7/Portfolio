@@ -512,8 +512,6 @@ button:hover span:not(:nth-child(6)) {
   }
 }
 
-
-
 .contact-section {
   max-width: 600px;
   margin: auto;
@@ -704,9 +702,29 @@ textarea:focus {
     text-align: center;
   }
 
-  .buttonBox {
-    display: none;
+  .modal-content{
+    min-width: 95%;
+    margin-top: none;
+
+    margin-bottom: 50px;
+    padding-bottom: none;
+    min-height: none;
+    
   }
+
+#modalImg{
+  
+  height: 180px;
+  overflow: hidden;
+  }
+
+.project-card{
+  max-width: 98%;
+}
+
+.modal-lists{
+  flex-direction: column;
+}
 
 }
 
