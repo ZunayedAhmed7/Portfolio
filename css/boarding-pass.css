@@ -1,0 +1,298 @@
+/* About section: approved paper boarding pass (concept A). */
+.pass-label {
+  font: 400 10px/1.6 'JetBrains Mono', monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.personal-pass {
+  --stub-width: 260px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--stub-width);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #172e3b;
+  border-radius: 8px;
+  background: #f8f3e6;
+  box-shadow: 2px 4px 0 #d8cfb8, 0 12px 24px -12px #172e3b38;
+}
+.pass-main,
+.pass-stub {
+  min-width: 0;
+}
+.pass-main {
+  display: flex;
+  flex-direction: column;
+}
+.pass-band,
+.pass-stub-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 58px;
+  padding: 16px 26px;
+  border-bottom: 3px solid #ca4b2b;
+}
+.pass-band {
+  background: #172e3b;
+  color: #f8f3e6;
+}
+.pass-band strong {
+  font: 600 20px/1 'Space Grotesk', sans-serif;
+  letter-spacing: -.5px;
+}
+.pass-band strong span {
+  color: #e5835d;
+}
+.pass-passenger {
+  display: grid;
+  grid-template-columns: 184px minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+  padding: 26px;
+  flex: 1;
+}
+.pass-portrait {
+  margin: 0;
+  min-width: 0;
+}
+.pass-photo {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border: 1px solid #bcb8a3;
+  background: #e4dfd0;
+}
+.pass-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 44% 67%;
+  transform: scale(1.95);
+  transform-origin: 44% 68%;
+}
+.pass-photo::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #ca4b2b;
+  border-left: 2px solid #ca4b2b;
+}
+.pass-portrait figcaption {
+  margin-top: 9px;
+  color: #55646a;
+  font-size: 9px;
+  letter-spacing: .5px;
+}
+.pass-copy {
+  min-width: 0;
+}
+.pass-copy > .pass-label {
+  color: #55646a;
+}
+#za-flightline-hybrid .pass-copy h3 {
+  margin-top: 5px;
+  font: 600 32px/1.12 'Space Grotesk', sans-serif;
+  letter-spacing: -.8px;
+}
+#za-flightline-hybrid .pass-work {
+  margin-top: 14px;
+  font: 400 13px/1.8 'Inter', sans-serif;
+}
+#za-flightline-hybrid .pass-bio {
+  margin-top: 19px;
+  max-width: 44ch;
+  font: 400 15px/1.75 'Inter', sans-serif;
+}
+.pass-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.pass-interests span {
+  padding: 5px 8px;
+  border: 1px solid #bcb8a3;
+  font: 400 9px/1.5 'JetBrains Mono', monospace;
+  letter-spacing: .2px;
+}
+.pass-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  min-height: 52px;
+  padding: 13px 26px;
+  border-top: 1px solid #bcb8a3;
+  background: #f0e9d666;
+}
+.pass-footer > .pass-label {
+  color: #b13e22;
+}
+.pass-footer > .pass-quote {
+  font: 400 12px/1.6 'Inter', sans-serif;
+}
+.pass-stub {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-left: 1px dashed #9b9e91;
+  background: #f0e9d680;
+}
+.pass-stub::before,
+.pass-stub::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #172e3b;
+  border-radius: 50%;
+  background: #f0e9d6;
+}
+.pass-stub::before {
+  top: -10px;
+}
+.pass-stub::after {
+  bottom: -10px;
+}
+.pass-stub-body {
+  padding: 22px 24px 0;
+}
+#za-flightline-hybrid .pass-stub h3 {
+  margin-bottom: 15px;
+  font: 600 23px/1.2 'Space Grotesk', sans-serif;
+  letter-spacing: -.5px;
+}
+#za-flightline-hybrid .pass-email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  padding: 12px 14px;
+  background: #172e3b;
+  color: #f8f3e6;
+  font: 500 11px/1.5 'JetBrains Mono', monospace;
+}
+#za-flightline-hybrid .pass-email:hover {
+  text-decoration: none;
+  background: #274653;
+}
+.pass-links {
+  display: grid;
+  margin-top: 10px;
+}
+.pass-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 39px;
+  border-bottom: 1px solid #bcb8a3;
+  font: 400 11px/1.6 'JetBrains Mono', monospace;
+}
+.pass-barcode-area {
+  margin-top: auto;
+  padding: 24px;
+}
+.pass-barcode {
+  --barcode-ink: #172e3b;
+  width: 100%;
+  height: 32px;
+  opacity: .8;
+  background: repeating-linear-gradient(90deg, var(--barcode-ink) 0 2px, transparent 2px 5px, var(--barcode-ink) 5px 6px, transparent 6px 8px, var(--barcode-ink) 8px 12px, transparent 12px 15px, var(--barcode-ink) 15px 16px, transparent 16px 20px, var(--barcode-ink) 20px 23px, transparent 23px 25px);
+}
+#za-flightline-hybrid .pass-barcode-caption {
+  margin-top: 7px;
+  text-align: center;
+  color: #55646a;
+  font-size: 8px;
+  letter-spacing: .6px;
+}
+
+@media (max-width: 1000px) {
+  .personal-pass {
+    --stub-width: 238px;
+  }
+  .pass-passenger {
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 20px;
+    padding: 22px;
+  }
+  #za-flightline-hybrid .pass-copy h3 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 800px) {
+  .personal-pass {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pass-stub {
+    border-left: 0;
+    border-top: 1px dashed #9b9e91;
+  }
+  .pass-stub::before {
+    left: -10px;
+    top: -10px;
+  }
+  .pass-stub::after {
+    left: auto;
+    right: -10px;
+    top: -10px;
+    bottom: auto;
+  }
+  .pass-stub-band {
+    min-height: 44px;
+    padding: 12px 22px;
+    border-bottom: 0;
+  }
+  .pass-stub-body {
+    padding: 0 22px;
+  }
+  .pass-barcode-area {
+    padding: 22px;
+  }
+  .pass-barcode {
+    height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .pass-band {
+    padding: 15px 18px;
+    gap: 12px;
+  }
+  .pass-band > .pass-label {
+    font-size: 8px;
+    letter-spacing: .5px;
+    text-align: right;
+  }
+  .pass-passenger {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px 18px;
+  }
+  .pass-portrait {
+    width: 148px;
+  }
+  .pass-portrait figcaption {
+    display: none;
+  }
+  .pass-footer {
+    padding: 14px 18px;
+  }
+  #za-flightline-hybrid .pass-bio {
+    font-size: 14px;
+  }
+}
+@media (pointer: coarse), (max-width: 620px) {
+  .pass-links a {
+    min-height: 44px;
+  }
+}
