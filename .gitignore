@@ -1,0 +1,5 @@
+# Local operating-system files and preview logs.
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
